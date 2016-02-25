@@ -21,7 +21,7 @@ end
 if msg.text == "blackhat" then
 	return "my love blackhat"
 end
-if msg.text == "shayan" then
+if msg.text == "kiarash" then
 	return "My developer"
 end
 if msg.text == "Mehdi" then
@@ -57,8 +57,8 @@ end
 if msg.text == "Nice" then
 	return "Nice?"
 end
-if msg.text == "sudoe man kie kie?" then
-	return "Shayan123"
+if msg.text == "sudo" then
+	return "@kiarash_gh14"
 end
 if msg.text == "kire??" then
 	return "KHAAAAR"
@@ -100,6 +100,7 @@ return {
 		"^[Kk]ire??$",
 		"^?$",
 		"^[Ss]alam$",
+		"^[Ss]udo$",
 		}, 
 	run = run,
     --privileged = true,
