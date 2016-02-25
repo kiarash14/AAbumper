@@ -274,21 +274,27 @@ function create_config( )
     "all",
     "leave_ban"
     },
-    sudo_users = {87160007,137791771},--Sudo users
+    sudo_users = {100096055},--Sudo users
     disabled_chann144152859els = {},
     realm = {},--Realms Id
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Eagle bot
-    
-     Hello my Good friends 
-     
-    ‼️ this bot is made by : @shayan123hacker
-   〰〰〰〰〰〰〰〰
-   ߔࠀ   our admins are : 
-   ߔࠀ   @shayan123hacker  〰〰〰〰〰〰〰〰
-  ♻️ You can send your Ideas and messages to Us By sending them into bots account by this command :
-   تمامی درخواست ها و همه ی انتقادات و حرفاتونو با دستور زیر بفرستین به ما
-   !feedback (your ideas and messages)
+    about_text = [[TeleBumper v2.5
+        
+http://s7.picofile.com/file/8234722668/Bumper
+
+
+Sudo:
+@kiarash_gh1 [Manager]
+
+
+Id Bot
+@TeleBumper 
+
+Id Channel
+@Bumperch
+
+Group Support:
+https://telegram.me/joinchat/BfdYNwhFyK_OGk_UJoL7UQ
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -370,10 +376,15 @@ Send text to all groups ✉️
 !br [group_id] [text]
 This command will send text to [group_id]✉️
 
+!Bumper
 
 You Can user both "!" & "/" for them
 
+Id Channel
+@Bumperch
 
+Group Support:
+https://telegram.me/joinchat/BfdYNwhFyK_OGk_UJoL7UQ
 
 ]],
     help_text = [[
@@ -567,14 +578,15 @@ To tags the every one and sends your message at bottom
 
 
 〰〰〰〰〰〰〰〰〰
-More plugins  soon ...
-⚠️ We are Eagle :))
-
-our channel : @eaglebot3
-کانال ما
+!Bumper
 
 You Can user both "!" & "/" for them
 
+Id Channel
+@Bumperch
+
+Group Support:
+https://telegram.me/joinchat/BfdYNwhFyK_OGk_UJoL7UQ
 
 ]]
 
