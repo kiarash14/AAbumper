@@ -388,9 +388,7 @@ https://telegram.me/joinchat/BfdYNwhFyK_OGk_UJoL7UQ
 
 ]],
     help_text = [[
-Creed bots Help for mods : Plugins
-
-Shayan123 : 
+Bumper Help for mods :
 
 
 Help For Banhammer 
