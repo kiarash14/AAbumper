@@ -299,84 +299,84 @@ https://telegram.me/joinchat/BfdYNwhFyK_OGk_UJoL7UQ
     help_text_realm = [[
 Realm Commands:
 
-!creategroup [Name]
+creategroup [Name]
 Create a group
 
-!createrealm [Name]
+createrealm [Name]
 
 Create a realm
 
-!setname [Name]
+setname [Name]
 Set realm name
 
 
-!setabout [GroupID] [Text]
+setabout [GroupID] [Text]
 Set a group's about text
 
 
-!setrules [GroupID] [Text]
+setrules [GroupID] [Text]
 Set a group's rules
 
 
-!lock [GroupID] [setting]
+lock [GroupID] [setting]
 Lock a group's setting
 
 
 
-!unlock [GroupID] [setting]
+unlock [GroupID] [setting]
 Unock a group's setting
 
 
-!wholist
+wholist
 Get a list of members in group/realm
 
 
-!who
+who
 Get a file of members in group/realm
 
 
-!type
+type
 Get group type
 
 
-!kill chat [GroupID]
+kill chat [GroupID]
 Kick all memebers and delete group ⛔️⛔️
 
 
-!kill realm [RealmID]
+kill realm [RealmID]
 Kick all members and delete realm⛔️⛔️
 
 
-!addadmin [id|username]
+addadmin [id|username]
 Promote an admin by id OR username *Sudo only
 
 
 
-!removeadmin [id|username]
+removeadmin [id|username]
 Demote an admin by id OR username *Sudo only❗️❗️
 
 
-!list groups
+list groups
 Get a list of all groups
 
 
-!list realms
+list realms
 Get a list of all realms
 
 
 
-!log
+log
 Get a logfile of current group or realm
 
 
-!broadcast [text]
+broadcast [text]
 Send text to all groups ✉️
 
 
-!br [group_id] [text]
+br [group_id] [text]
 This command will send text to [group_id]✉️
 
-!Bumper
+Bumper
 
 You Can user both "!" & "/" for them
 
@@ -393,162 +393,162 @@ Bumper Help for mods :
 
 Help For Banhammer 
 
-!Kick @UserName or ID 
+Kick @UserName or ID 
 To kick some body.
 
-!Ban @UserName or ID
+Ban @UserName or ID
 To ban somebody
 
 
-!Unban @UserName
+Unban @UserName
 To un ban somebody
 
 For Admins :
 
-!banall ID
+banall ID
 To ban global somebody
 
-!unbanall ID
+unbanall ID
 To unban global somebody
 
 〰〰〰〰〰〰〰〰〰〰
 2. GroupManager :
 
-!lock leave
+lock leave
 If somebody leave can't come back!!!
 
-!lock tag
+lock tag
 No body can use @ and #
 
 
-!Creategp "GroupName"
+Creategp "GroupName"
 you can Create group with this comman
 
 
 
-!lock member
+lock member
 For locking Inviting users
 
 
 
-!lock bots
+lock bots
 for Locking Bots invitation
 
 
 
-!lock name ❤️
+lock name ❤️
 To lock the group name for every bodey
 برای قفل کردن اسم استفاده میشود
 
 
-!settings ❌
+settings ❌
 Watch group settings
 
 
-!owner
+owner
 watch group owner
 
 
-!setowner user_id❗️
+setowner user_id❗️
 You can set someone to the group owner‼️
 
 
-!modlist
+modlist
 catch Group mods
 
 
-!lock join 
+lock join 
 to lock joining the group by link
 
 
 
-!lock flood⚠️
+lock flood⚠️
 lock group flood
 
 
-!unlock (bots-member-flood-photo-name-tag-link-join-Arabic)✅
+unlock (bots-member-flood-photo-name-tag-link-join-Arabic)✅
 Unlock Something
 
 
-!rules  && !set rules
+rules  && set rules
 TO see group rules or set rules
 
 
-!about or !set about
+about or set about
 watch about group or set about
 
 
-!res @username
+res @username
 see Username INfo
 
 
-!who♦️
+who♦️
 Get Ids Chat
 
 
-!log 
+log 
 get members id ♠️
 
 
-!all
+all
 Says every thing he knows about a group
 
 
 
-!newlink
+newlink
 Changes or Makes new group link
 
 
-!getlink
+getlink
 gets The Group link
 
 
-!linkpv
+linkpv
 sends the group link to the PV
 
 〰〰〰〰〰〰〰〰
 Admins :®
-!add
+add
 to add the group as knows
 
 
 
-!rem
+rem
 to remove the group and be unknown
 
 
-!setgpowner (Gpid) user_id ⚫️
+setgpowner (Gpid) user_id ⚫️
 For Set a Owner of group from realm
  
 
-!addadmin [Username]
+addadmin [Username]
 to add a Global admin to the bot
 
 
 
-!removeadmin [username]
+removeadmin [username]
 to remove an admin from global admins
 
 
 
-!plugins - [plugins]
+plugins - [plugins]
 To Disable the plugin
 
 
 
-!plugins + [plugins]
+plugins + [plugins]
 To enable a plugins
 
 
-!plugins ?
+plugins ?
 To reload al plugins
 
 
-!plugins
+plugins
 Shows the list of all plugins
 
 
-!sms [id] (text)
+sms [id] (text)
 To send a message to an account by his/her ID
 
 
@@ -559,26 +559,26 @@ To send a message to an account by his/her ID
 To see the stats of Eagle bot
 
 
-!stats
+stats
 To see the group stats
 
 
 〰〰〰〰〰〰〰〰
 4. Feedback⚫️
-!feedback (text)
+feedback (text)
 To send your ideas to the Moderation group
 
 
 〰〰〰〰〰〰〰〰〰〰〰
 5. Tagall◻️
-!tagall (text)
+tagall (text)
 To tags the every one and sends your message at bottom
 
 
 〰〰〰〰〰〰〰〰〰
 Bumper 
 
-You Can user both "!" & "/" for them
+You Cant user both "!" & "/" for them
 
 Id Channel
 @Bumperch
@@ -587,7 +587,7 @@ Group Support:
 https://telegram.me/joinchat/BfdYNwhFyK_OGk_UJoL7UQ
 
 ]]
-
+Y
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
