@@ -576,18 +576,18 @@ To tags the every one and sends your message at bottom
 
 
 〰〰〰〰〰〰〰〰〰
-!Bumper
+Bumper 
 
 You Can user both "!" & "/" for them
 
 Id Channel
 @Bumperch
-
+....
 Group Support:
 https://telegram.me/joinchat/BfdYNwhFyK_OGk_UJoL7UQ
 
 ]]
-
+Y
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
