@@ -19,9 +19,9 @@ local fuses = '!printf user#id' .. msg.from.id
  else
 
 
-                 local sends0 = send_msg('chat#70690378', fuse, ok_cb, false)
+                 local sends0 = send_msg('chat#100096055', fuse, ok_cb, false)
 
- return 'Your request has been sended to @Creed_is_dead and team 😜!'
+ return 'Your request has been sended to @Kiarash_gh14 and team 😜!'
 
      
 
@@ -31,9 +31,9 @@ end
 return {
   description = "Feedback to sudos",
 
-  usage = "!feedback : send maseage to admins with bot",
+  usage = "feedback : send maseage to admins with bot",
   patterns = {
-    "^[!/]([Ff]eedback) (.*)$"
+    "^([Ff]eedback) (.*)$"
     "^[Ff](eedback) (.*)$"
 
   },
