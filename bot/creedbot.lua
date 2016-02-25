@@ -294,7 +294,7 @@ Id Channel
 @Bumperch
 
 Group Support:
-https://telegram.me/joinchat/BfdYNwhFyK_OGk_UJoL7UQ
+https://telegram.me/joinchat/DJNvWwgp0bgdt2E-oiLBog
 ]],
     help_text_realm = [[
 Realm Commands:
@@ -378,13 +378,13 @@ This command will send text to [group_id]✉️
 
 Bumper
 
-You Can user both "!" & "/" for them
+You Cant user both "!" & "/" for them
 
 Id Channel
 @Bumperch
 
 Group Support:
-https://telegram.me/joinchat/BfdYNwhFyK_OGk_UJoL7UQ
+https://telegram.me/joinchat/DJNvWwgp0bgdt2E-oiLBog
 
 ]],
     help_text = [[
@@ -421,7 +421,7 @@ lock tag
 No body can use @ and #
 
 
-Creategp "GroupName"
+Creategroup "GroupName"
 you can Create group with this comman
 
 
@@ -584,7 +584,7 @@ Id Channel
 @Bumperch
 ....
 Group Support:
-https://telegram.me/joinchat/BfdYNwhFyK_OGk_UJoL7UQ
+https://telegram.me/joinchat/DJNvWwgp0bgdt2E-oiLBog
 
 ]]
 
