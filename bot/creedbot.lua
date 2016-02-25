@@ -587,7 +587,7 @@ Group Support:
 https://telegram.me/joinchat/BfdYNwhFyK_OGk_UJoL7UQ
 
 ]]
-Y
+
   }
   serialize_to_file(config, './data/config.lua')
   print('saved config into ./data/config.lua')
