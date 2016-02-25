@@ -9,7 +9,7 @@ local function invite_user(chat, user)
 	  
 	  
 	  
-	  Contact With @Mega_admin
+	  Contact With @Kiarash_gh14
 	  ]]
    end
    return "کاربر: "..user.." ادد شد به گروه "..chat
