@@ -555,7 +555,7 @@ To send a message to an account by his/her ID
 
 〰〰〰〰〰〰〰〰〰〰〰
 3. Stats :©
-!stats creedbot (sudoers)✔️
+stats Bumper (sudoers)✔️
 To see the stats of Eagle bot
 
 
