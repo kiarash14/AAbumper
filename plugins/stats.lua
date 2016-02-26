@@ -94,7 +94,7 @@ local function run(msg, matches)
   if matches[1]:lower() == 'bumper' then -- Put everything you like :)
     local about = _config.about_text
     local name = user_print_name(msg.from)
-    savelog(msg.to.id, name.." ["..msg.from.id.."] used /bumper ")
+    savelog(msg.to.id, name.." ["..msg.from.id.."] used bumper ")
     return about
   end 
   if matches[1]:lower() == "statslist" then
