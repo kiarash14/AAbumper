@@ -1,25 +1,25 @@
-do
+do 
 
 -- Returns a table with `name` and `msgs`
-local function get_msgs_user_channel(user_peer_id, channel_peer_id)
+local function get_msgs_user_chat(user_id, chat_id)
   local user_info = {}
-  local uhash = 'user:'..user_peer_id
+  local uhash = 'user:'..user_id
   local user = redis:hgetall(uhash)
-  local um_hash = 'msgs:'..user_id..':'..channel_peer_id
+  local um_hash = 'msgs:'..user_id..':'..chat_id
   user_info.msgs = tonumber(redis:get(um_hash) or 0)
-  user_info.name = user_print_name(user)..' ['..user_peer_id..']'
+  user_info.name = user_print_name(user)..' ['..user_id..']'
   return user_info
 end
 
-local function channel_stats(channel_peer_id)
+local function chat_stats(chat_id)
   -- Users on chat
-  local hash = 'chat:'..channel_peer_id..':users'
+  local hash = 'channel:'..chat_id..':users'
   local users = redis:smembers(hash)
   local users_info = {}
   -- Get user info
   for i = 1, #users do
-    local user_peer_id = users[i]
-    local user_info = get_msgs_user_channel(user_peer_id, channel_peer_id)
+    local user_id = users[i]
+    local user_info = get_msgs_user_chat(user_id, chat_id)
     table.insert(users_info, user_info)
   end
   -- Sort users by msgs number
@@ -32,24 +32,24 @@ local function channel_stats(channel_peer_id)
   for k,user in pairs(users_info) do
     text = text..user.name..' = '..user.msgs..'\n'
   end
-  local file = io.open("./groups/lists/"..channel_peer_id.."stats.txt", "w")
+  local file = io.open("./groups/lists/"..chat_id.."stats.txt", "w")
   file:write(text)
   file:flush()
   file:close() 
-  send_document("channel#peer_id"..channel_peer_id,"./groups/lists/"..channel_peer_id.."stats.txt", ok_cb, false)
+  send_document("channel#id"..chat_id,"./groups/lists/"..chat_id.."stats.txt", ok_cb, false)
   return --text
 end
 
-local function channel_stats2(channel_peer_id)
+local function chat_stats2(chat_id)
   -- Users on chat
-  local hash = 'channel:'..channel_peer_id..':users'
+  local hash = 'channel:'..chat_id..':users'
   local users = redis:smembers(hash)
   local users_info = {}
 
   -- Get user info
   for i = 1, #users do
-    local user_peer_id = users[i]
-    local user_info = get_msgs_user_channel(user_peer_id, channel_peer_id)
+    local user_id = users[i]
+    local user_info = get_msgs_user_chat(user_id, chat_id)
     table.insert(users_info, user_info)
   end
 
@@ -81,11 +81,11 @@ local function bot_stats()
     return count]]
 
   -- Users
-  local hash = 'msgs:*:'..our_peer_id
+  local hash = 'msgs:*:'..our_id
   local r = redis:eval(redis_scan, 1, hash)
   local text = 'Users: '..r
 
-  hash = 'channel:*:users'
+  hash = 'chat:*:users'
   r = redis:eval(redis_scan, 1, hash)
   text = text..'\nGroups: '..r
   return text
@@ -94,30 +94,30 @@ local function run(msg, matches)
   if matches[1]:lower() == 'bumper' then -- Put everything you like :)
     local about = _config.about_text
     local name = user_print_name(msg.from)
-    savelog(msg.to.peer_id, name.." ["..msg.from.peer_id.."] used /bumper ")
+    savelog(msg.to.id, name.." ["..msg.from.id.."] used bumper ")
     return about
   end 
   if matches[1]:lower() == "statslist" then
     if not is_momod(msg) then
       return "For mods only !"
     end
-    local channel_peer_id = msg.to.peer_id
+    local chat_id = msg.to.id
     local name = user_print_name(msg.from)
-    savelog(msg.to.peer_id, name.." ["..msg.from.peer_id.."] requested group stats ")
-    return chat_stats2(channel_peer_id)
+    savelog(msg.to.id, name.." ["..msg.from.id.."] requested group stats ")
+    return chat_stats2(chat_id)
   end
   if matches[1]:lower() == "stats" then
     if not matches[2] then
       if not is_momod(msg) then
         return "For mods only !"
       end
-      if msg.to.type == 'chat' then
-        local chat_peer_id = msg.to.peer_id
+      if msg.to.type == 'channel' then
+        local chat_id = msg.to.id
         local name = user_print_name(msg.from)
-        savelog(msg.to.peer_id, name.." ["..msg.from.peer_id.."] requested group stats ")
+        savelog(msg.to.id, name.." ["..msg.from.id.."] requested group stats ")
         return chat_stats(chat_id)
       else
-        return 
+        return      
       end
     end
     if matches[2] == "bumper" then -- Put everything you like :)
@@ -131,18 +131,20 @@ local function run(msg, matches)
       if not is_admin(msg) then
         return "For admins only !"
       else
-        return channel_stats(matches[3])
+        return chat_stats(matches[3])
       end
     end
   end
 end
 return {
   patterns = {
-    "^[!/]([Ss]tats)$",
-    "^[!/]([Ss]tatslist)$",
-    "^[!/]([Ss]tats) (group) (%d+)",
-    "^[!/]([Ss]tats) (bumper)",-- Put everything you like :)
-		"^[!/]([Bb]umper)"-- Put everything you like :)
+    "^([Ss]tats)$",
+    "^([Ss]tatslist)$",
+    "^([Ss]tats) (group) (%d+)",
+    "^([Ss]tats) (bumper)",-- Put everything you like :)
+		"^([Bb]umper)"-- Put everything you like :)
     }, 
   run = run
 }
+
+end
